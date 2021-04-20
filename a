@@ -1,0 +1,86 @@
+
+<p id="hello"></p>
+<p>petrol pumps</p>
+<p id="random100"></p>
+<p>Random Stops in sets of 6</p>
+<p id="random6"></p>
+<p>distance travelled in Kms</p>
+<p id="resultofrandom6"></p>
+<p>petrol remaining</p>
+<p id="petrol"></p>
+<p>-----------</p>
+<p id="random"></p>
+<script>
+
+document.getElementById("hello").innerHTML = "Game Started";
+
+var y=Math.floor(Math.random() * 100) + 1  ;
+document.getElementById("random100").innerHTML = y;
+
+var i;
+
+for (i = 0; i < 100; i++) {
+
+
+}
+
+var x=Math.floor(Math.random() * 6) + 1  ;
+document.getElementById("random6").innerHTML = x;
+
+
+var distance=0;
+distance=distance+x;  + "<br>";
+document.getElementById("resultofrandom6").innerHTML =distance;
+
+var petrol=30;
+petrol=petrol-x;
+document.getElementById("petrol").innerHTML =petrol;
+
+
+/*--------*/
+
+var distance,x,i=1,petrol=30;
+for( distance= 0;distance<=100; i++){
+  
+x=Math.floor(Math.random() * 6) + 1  ;
+console.log("MOVE",i);
+console.log("random number-",x);
+distance=distance+x;
+console.log("distance travelled:",distance);
+petrol=petrol-distance;
+console.log("remaining petrol:",petrol);
+
+}
+
+
+/*-------------*/
+const randomarr=[];
+for (var n = 0; n <= 4; n++) {
+randomarr[n]=Math.floor(Math.random() * 100) + 1  ;
+console.log(randomarr[n]);
+}
+
+/*--------*/
+
+const randomarr=[];
+var n;
+for ( n = 0; n <= 4; n++) {
+  
+randomarr[n]=Math.floor(Math.random() * 100) + 1  ;
+randomarr.sort();
+console.log("petrol bunks",randomarr[n]);
+}
+/*-------------*/
+
+
+
+
+
+var abc = "";
+for (i = 0; i < 100; i++) {
+var x=Math.floor(Math.random() * 6) + 1  ;
+//document.getElementById("random6").innerHTML = x;
+abc += "The number is " + x + "<br>";
+document.getElementById("random").innerHTML = abc;
+}
+</script>
